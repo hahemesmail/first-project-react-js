@@ -1,0 +1,20 @@
+.container{
+    position: relative;
+}
+.container > button {
+    width: fit-content;
+    position: fixed;
+    z-index: 1;
+    top: 23%;
+    right: 0%;
+    padding: 4px 8px;
+    border-radius: 7px;
+    border: none;
+    transition: 0.3s;
+    outline: none;
+    cursor: pointer;
+    display:none;
+}
+.container > .bb{
+    display: block;
+}

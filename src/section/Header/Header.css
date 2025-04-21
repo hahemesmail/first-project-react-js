@@ -1,0 +1,137 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 32px;
+    background-image: repeating-linear-gradient(172deg, #1b1a1ad1, #433e3e61 499px);
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.Header .icon a {
+    font-size: 29px;
+    display: block;
+    color: #e3e3e3;
+    /* */
+}
+
+
+.Header ul {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    transition: 0.3s;
+}
+
+.Header ul  .next li:nth-child(1) a, .Header ul .next li:nth-child(2) a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 15px;
+    background: var(--colorheader);
+    border-radius: 50%;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.3s;
+}
+.Header ul  .next li:nth-child(1):hover a, .Header ul .next li:nth-child(2):hover a{
+    background-color: transparent;
+    border: 1px solid var(--colorheader);
+}
+.Header ul  .next:nth-child(1){
+    position: relative;
+    left: 6%;
+}
+.Header ul .one a,
+.Header ul .two a ,
+.Header ul .three a,
+.Header ul .four a,
+.Header ul .five a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.Header ul .one:hover,
+.Header ul .two:hover,
+.Header ul .three:hover,
+.Header ul .four:hover{
+    font-size: 21px;
+    border-bottom: 1px solid white;
+}
+.stream{
+    display: none;
+    cursor: pointer;
+}
+.Header ul.p{
+    top: 87px;
+}
+.Header ul .five {
+    background-color: var(--colorheader);
+    padding: 5px 8px;
+    border-radius: 18px;
+}
+.Header ul .five a {
+    font-size: 16px;
+    color: #00000096;
+    font-weight: bold;
+}
+.Header ul .sinon{
+    border: 1px solid var(--colorheader);
+    background-color: transparent;
+    color: wheat;
+}
+.Header ul .five .sinona{
+    color: wheat;
+}
+.Header ul .five:hover{
+    border: 1px solid var(--colorheader);
+    background-color: transparent;
+    color: wheat;
+}
+.Header ul .five:hover a{
+    color: wheat;
+}
+
+@media (max-width: 710px) {
+    .stream {
+        display: block;
+        color: #ccc;
+    }
+
+
+    .Header ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        gap: 26px;
+        width: 100%;
+        justify-content: center;
+        top: -1187px;
+        z-index: -1;
+        background: #000000db;
+        color: black;
+        padding: 32px;
+        left: 0;
+    }
+
+    
+}
+
+@media (max-width:670px){
+    .Header{
+        position: relative;
+        background-color:var(--colorbackground);
+        z-index: 10;
+    }
+
+
+}
+.padding{
+    padding-top: 100px;
+}
+.Header ul li a.ki{
+    border-bottom: 2px solid wheat;
+    color: var(--colorheader);
+}

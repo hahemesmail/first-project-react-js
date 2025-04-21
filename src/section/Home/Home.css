@@ -1,0 +1,69 @@
+.Homes {
+    background-image: url("../../component/image/tt.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(100vh - 88.2px);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+.Homes .container {
+    background: #000000b0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Homes .container .content {
+    line-height: 1.9;
+    padding: 90px;
+}
+.Homes .container .content > p{
+    font-size: 14px;
+    color: white;
+}
+.text {
+    width: 100%;
+    height: 50px;
+    font-size: 41px;
+    font-weight: bold;
+    color: orange;
+}
+@media (max-width:700px) {
+   
+    .Homes .container .content {
+        padding: 90px 50px;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .Homes .container .content .lorem{
+        line-height: 1.4;
+        margin:0 0 22px;
+    }
+    .content .button{
+        padding: 8px 30px;
+        font-size: 10px;
+    }
+    
+}
+.slides{
+    animation: move 1s linear both;
+    opacity: 0;
+    position: relative;
+}
+@keyframes move {
+    0%{
+        opacity: 0;
+        top: -20px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+    
+}

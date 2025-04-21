@@ -1,0 +1,81 @@
+.about {
+    background-color: var(--colorbackground);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:51px 51px 0;
+    gap: 54px;
+    box-shadow: -6px 18px 54px 17px #060606
+}
+.about img {
+    max-width: 601px;
+    border: 6px solid wheat;
+    padding: 24px 196px;
+}
+.about .nested {
+    /* line-height: 3.5; */
+    margin-bottom: 127px;
+    flex: 1;
+}
+.about .nested h2{
+    color: var(--colorheader);
+    font-size: 30PX;
+}
+.lorem {
+    line-height: 1.9;
+    max-width: 997px;
+}
+.about .nested p {
+    max-width: 737px;
+    color: white;
+    line-height: 2;
+    margin-top: 27px;
+}
+.about .nested .buttons{
+    margin-top: 20px;
+}
+.about .nested .buttons .buttoncolor {
+    margin-left: 13px;
+    
+}
+@media (max-width:1250px) {
+    .about .nested{
+        text-align: center;
+    }
+    .about img{
+        display: none;
+    }
+    .about .nested p{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    
+    
+}
+@media (max-width:500px){
+    .about .nested .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .about .nested .buttons .buttoncolor{
+        margin-left: 0;
+    }
+}
+.slides{
+    animation: move 1s linear both;
+    opacity: 0;
+    position: relative;
+}
+@keyframes move {
+    0%{
+        opacity: 0;
+        top: -20px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+    
+}

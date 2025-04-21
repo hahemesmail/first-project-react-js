@@ -1,0 +1,43 @@
+.services {
+    background-color: var(--colorbackground);
+}
+.services h2 {
+    color: var(--colorheader);
+    text-align: center;
+    font-size: 30px;
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(382px, 1fr));
+    gap: 20px;
+    margin-top: 39px;
+    padding: 30px;
+}
+@media (max-width:888px) {
+    .services .container .box{
+        text-align: center;
+    }
+    
+}
+.services .container .box {
+    background-color: rgb(24 21 21);
+    color: white;
+    padding: 20px;
+    transition: 0.3s;
+    transform: translate(-30px,-34px);
+}
+.run{
+    animation:runs 1s linear both;
+    opacity: 0;
+}
+@keyframes runs {
+    20%{
+
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+    
+}

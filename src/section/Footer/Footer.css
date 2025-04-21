@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--coloropacity);
+    padding: 7px 40px;
+    position: relative;
+}
+
+
+.end span{
+    color: var(--colorheader);
+}
+.end p{
+    display: inline-block;
+    margin-left: 10px;
+    color: wheat;
+}
+.end1{
+    color: #cd2222;;
+    
+}
