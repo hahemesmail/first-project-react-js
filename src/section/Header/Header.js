@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Header(){
 
-let refheader=useRef()
+let refheader=useRef(null)
 const[s,sets]=useState(0)
 
 
@@ -15,11 +15,14 @@ useEffect(() => {
 
     const headerChildren = refheader.current.children;
     const nextSibling = refheader.current.nextSibling;
+    if (!nextSibling && !nextSibling.children[0] && !headerChildren[1] && !headerChildren[1].children) {
+        return
+    }
     if (nextSibling && nextSibling.children[0] && headerChildren[1] && headerChildren[1].children) {
         let serve = new Set(nextSibling.children[0].children);
         let t = new Set(headerChildren[1].children);
-
-        serve.forEach((e) => {           
+    
+            serve.forEach((e) => {           
             if (e.classList.contains("services")) {
                 let c = 0;
                 serve.forEach(() => {
@@ -32,8 +35,10 @@ useEffect(() => {
                 }
             }
         });
+        
 
-        t.forEach((e) => {
+        
+            t.forEach((e) => {
             if (e.children[0].classList.contains("o")) {
                 t.forEach((e) => {
                     e.classList.remove("sinon")
@@ -52,6 +57,9 @@ useEffect(() => {
             }
             
         });
+        
+
+        
     }
 }, [s]);
 
@@ -59,6 +67,7 @@ useEffect(() => {
 
 function p(e){
     sets(p=>p+1)
+    if (!e.target) return;
     e.target.classList.add("o")
 }
 
